@@ -2,6 +2,9 @@ body {
     font-family: Poppins;
     margin: 0;
   }
+  body button{
+    cursor: pointer;
+  }
   body .row {
     display: flex;
   }
@@ -157,13 +160,22 @@ body {
     color: #fff;
     font-size: 17px;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
     max-height: 44px;
     height: 44px;
     width: 115px;
-    justify-content: center;
     gap: 8px;
+    position: relative;
+    padding-right: 15px;
+  }
+  .logged-in #header .header-wrapper .header-right .login {
+    width: 145px;
+  }
+  #header .header-wrapper .header-right .login:before{
+    content:url('/images/dropdown_icon.png');
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translatey(-60%);
   }
   #header .header-wrapper .header-right .side-menu {
     background-color: #ffc03f;

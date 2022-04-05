@@ -1,14 +1,19 @@
 $(document).ready(function(){
+    if ($.cookie('username')) {
+        let username = $.cookie('username');
+        $('.logged-in .login').html(`Hey <strong>${username}!</strong>`);
+    }
+    
 
     let modalForm = $('.modal-login');
     let overlay = $('.overlay');
     let videoUrl = $('.video-inner iframe').attr('src');
     
-    $('.login').on('click', function (){
-        //e.preventDefault()
-        modalForm.fadeIn(400);
-        overlay.fadeIn(400);
-    })
+    // $('.login').on('click', function (){
+    //     //e.preventDefault()
+    //     modalForm.fadeIn(400);
+    //     overlay.fadeIn(400);
+    // })
     overlay.on('click', function (){
         modalForm.fadeOut(400);
         overlay.fadeOut(400);

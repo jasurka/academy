@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Title</title>
 </head>
-<body>
+<body class="<?php if (isset($_COOKIE['id']) && !empty($_COOKIE['id'])){ echo 'logged-in';} ?>">
 <header id="header">
     <div class="header-wrapper container row">
         <div class="header-left">
@@ -28,7 +30,7 @@
         </div>
         <div class="header-right">
             <button class="cart-button"><img src="images/icon_Cart.png" class="cart-icon">Cart</button>
-            <button class="login">Login<img src="images/dropdown_icon.png" class="login-arrow"></button>
+            <button class="login">Login</button>
             <div class="side-menu"><img src="images/hamburger_menu.png" class="side-menu-icon"></div>
         </div>
     </div>
@@ -204,25 +206,6 @@
     </div>
 </div>
 <div class="overlay">
-    <div class="modal-login">
-        <div class="modal-inner row">
-            <div class="col-6">
-                    <div class="form-heading">Login</div>
-                    <form class="login-form">
-                        <input type="text" class="login modal-input" name="login-name">
-                        <input type="password" class="password modal-input" name="login-password">
-                    </form>
-            </div>
-            <div class="col-6">
-                    <div class="form-heading">Sign up</div>
-                    <form class="register-form">
-                        <input type="text" class="login modal-input" name="register-name">
-                        <input type="password" class="password modal-input" name="register-password">
-                    </form>
-            </div>
-            <img src="images/close-button.png" class="close-button" width="32" height="32">
-        </div>
-    </div>
     <div class="video-modal">
         <div class="video-inner row">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/kgvH6tX4Ej0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
