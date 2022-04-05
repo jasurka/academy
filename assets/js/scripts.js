@@ -1,7 +1,9 @@
 $(document).ready(function(){
     if ($.cookie('username')) {
         let username = $.cookie('username');
-        $('.logged-in .login').html(`Hey <strong>${username}!</strong>`);
+        $('.logged-in .login').html(`Hi, <strong>${username}!</strong>`).attr('onclick', 'location.href="/logout.php"');
+    }else{
+        $('.login').attr('onclick', 'location.href="/login.php"');
     }
     
 
