@@ -1,7 +1,15 @@
+<?php
+
+if ( !isset( $_COOKIE['id'] )){
+    header("Location: login/");
+} else {
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'head.php'; ?>
-<body class="<?php if (isset($_COOKIE['id']) && !empty($_COOKIE['id'])){ echo 'logged-in';} ?>">
+<body class="<?php if ( isset($_COOKIE['id']) ){ echo 'logged-in';} ?>">
 <header id="header">
     <div class="header-wrapper container row">
         <div class="header-left">
@@ -223,3 +231,7 @@
 <script src="assets/js/scripts.js"></script>
 </body>
 </html>
+
+<?php 
+}
+?>

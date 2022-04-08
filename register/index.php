@@ -1,6 +1,6 @@
 <?php
 
-require_once 'bd/bd.php';
+require_once '../bd/bd.php';
 
 
 
@@ -46,7 +46,7 @@ if(isset($_POST['register_submit'])){
 $bd_connect->close();
 
 ?>
-<?php require_once 'head.php'; ?>
+<?php require_once '../head.php'; ?>
      <div class="register-wrapper">   
         <div class="form-heading">Sign up</div>
         <form class="register-form" method="POST">
@@ -54,6 +54,7 @@ $bd_connect->close();
             <input type="password" class="password modal-input" name="register_password" required>
             <input type="submit" name="register_submit">
         </form>
+        <p class="to-log-text">Already have an account? <a href="/login/" class="to-log">Login</a></p>
     </div>
     <style>
     .register-wrapper{
