@@ -56,33 +56,3 @@ $bd_connect->close();
         </form>
         <p class="to-log-text">Already have an account? <a href="/login/" class="to-log">Login</a></p>
     </div>
-    <style>
-    .register-wrapper{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .form-heading{
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    .register-form{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-    input{
-        border: 1px solid #333;
-        border-radius: 8px;
-        font-size: 18px;
-        padding: 8px;
-    }
-    input[type="submit"]{
-        background-color: #0d41ff;
-        color: #fff;
-        border: none;
-    }
-</style>

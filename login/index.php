@@ -42,33 +42,3 @@ $bd_connect->close();
     <p class="to-reg-text">Do not have an account? <a href="/register/" class="to-reg">Sign Up</a></p>
     <div class="incorrect-pass"><?php if( !empty( $notice ) ) : echo $notice; endif; ?></div>
 </div>
-<style>
-    .login-wrapper{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .form-heading{
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    .login-form{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-    input{
-        border: 1px solid #333;
-        border-radius: 8px;
-        font-size: 18px;
-        padding: 8px;
-    }
-    input[type="submit"]{
-        background-color: #0d41ff;
-        color: #fff;
-        border: none;
-    }
-</style>
