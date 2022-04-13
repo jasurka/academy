@@ -25,7 +25,7 @@ if ( !isset( $_COOKIE['id'] )){
             </ul>
         </div>
         <div class="header-right">
-            <button class="cart-button"><img src="images/icon_Cart.png" class="cart-icon">Cart</button>
+            <a href="archive-post.php" class="cart-button"><img src="images/icon_Cart.png" class="cart-icon">Posts</a>
             <button class="login">Login</button>
             <div class="side-menu"><img src="images/hamburger_menu.png" class="side-menu-icon"></div>
         </div>
@@ -229,5 +229,6 @@ if ( !isset( $_COOKIE['id'] )){
 
 
 <?php 
+require_once 'footer.php';
 }
 ?>

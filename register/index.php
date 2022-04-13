@@ -28,9 +28,9 @@ if(isset($_POST['register_submit'])){
         $sql = "INSERT INTO academy_users (user_login, user_password) VALUES ( '" . $user_login . "' , '" . $user_password . "' )";
         
         if ( $bd_connect->query($sql) === TRUE){
-            echo 'You have registered successfully';
+            $notice = 'You have registered successfully';
         } else{
-            echo 'Something wrong went';
+            $notice = 'Something wrong went';
         }
 
     } else {
@@ -46,7 +46,7 @@ if(isset($_POST['register_submit'])){
 $bd_connect->close();
 
 ?>
-<?php require_once '../head.php'; ?>
+<?php require_once '../header.php'; ?>
      <div class="form-wrapper">   
         <div class="form-heading">Sign up</div>
         <form class="register-form form" method="POST">
@@ -55,4 +55,5 @@ $bd_connect->close();
             <input type="submit" name="register_submit">
         </form>
         <p class="to-log-text">Already have an account? <a href="/login/" class="to-log">Login</a></p>
+        <?php if ( !empty($notice) ) : echo $notice; endif; ?>
     </div>

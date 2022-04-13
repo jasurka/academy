@@ -23,8 +23,6 @@ if( !empty( $_POST['post_update'] ) ) {
         $notice = "Something went wrong, try again later";
     }
 }
-var_dump($_POST);
-
 
 //data for form
 $post_info_sql = "SELECT post_title, post_excerpt FROM posts WHERE post_id=" . $post_id . "";

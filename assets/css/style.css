@@ -553,10 +553,13 @@ input[type="submit"]{
   color: #fff;
   border: none;
 }
-
-.posts-row {
+.actions-row{
   padding-top: 100px;
+  margin-bottom: 20px;
+}
+.posts-row {
   gap: 20px;
+  flex-wrap: wrap;
 }
 .posts-row .post-item{
   border: 1px solid #ddd;

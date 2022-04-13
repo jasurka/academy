@@ -17,7 +17,10 @@ function post_render ( $posts ){
             <p class="post-date">
                 <?php if ( !empty( $post['post_date'] ) ) : echo $post['post_date']; endif; ?>
             </p>
-            <a href="<?php echo 'edit-post.php?post=' . $post['post_id']; ?>" class="edit-post">Edit post</a>
+            <div class="row" style="justify-content:space-between">
+                <a href="<?php echo 'edit-post.php?post=' . $post['post_id']; ?>" class="edit-post">Edit post</a>
+                <a href="<?php echo 'delete-post.php?post=' . $post['post_id']; ?>" class="delete-post">Delete post</a>
+            </div>
         </div>
     <?php
     }
@@ -28,7 +31,12 @@ while( $row = $result->fetch_array(MYSQLI_ASSOC) ){
 }
 require_once 'header.php';
 ?>
+<div class="actions-row container row">
+    <a href="add-post.php" class="add-post">Add new post</a>
+</div>
 <div class="posts-row container row">
+
+    
     <?php post_render( $rows ); ?>
 </div>
 
