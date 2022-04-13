@@ -40,18 +40,18 @@ $(document).ready(function(){
         margin:20,
     });
 
-    let form = $('.form');
-    let formPopup = $('.form-popup');
-    form.on('submit', function(e){
-        e.preventDefault();
-        formPopup.find('.name-value').html($('#name').val());
-        formPopup.find('.email-value').html($('#email').val());
-        formPopup.find('.phone-value').html($('#phone').val());
-        //formPopup.find('.course-value').html($('#name').val());
-        overlay.fadeIn(400);
-        formPopup.fadeIn(400);
+    // let form = $('.form');
+    // let formPopup = $('.form-popup');
+    // form.on('submit', function(e){
+    //     e.preventDefault();
+    //     formPopup.find('.name-value').html($('#name').val());
+    //     formPopup.find('.email-value').html($('#email').val());
+    //     formPopup.find('.phone-value').html($('#phone').val());
+    //     //formPopup.find('.course-value').html($('#name').val());
+    //     overlay.fadeIn(400);
+    //     formPopup.fadeIn(400);
 
-    });
+    // });
 
 });
 

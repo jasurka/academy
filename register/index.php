@@ -47,9 +47,9 @@ $bd_connect->close();
 
 ?>
 <?php require_once '../head.php'; ?>
-     <div class="register-wrapper">   
+     <div class="form-wrapper">   
         <div class="form-heading">Sign up</div>
-        <form class="register-form" method="POST">
+        <form class="register-form form" method="POST">
             <input type="text" class="login modal-input" name="register_name" required>
             <input type="password" class="password modal-input" name="register_password" required>
             <input type="submit" name="register_submit">

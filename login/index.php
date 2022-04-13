@@ -31,7 +31,7 @@ if( is_logged() ){
 
 $bd_connect->close();
 ?>
-<?php require_once '../head.php'; ?>
+<?php require_once '../header.php'; ?>
 <div class="login-wrapper">
     <div class="form-heading">Login</div>
     <form class="login-form" method="POST">

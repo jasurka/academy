@@ -6,10 +6,9 @@ if ( !isset( $_COOKIE['id'] )){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<?php require_once 'head.php'; ?>
-<body class="<?php if ( isset($_COOKIE['id']) ){ echo 'logged-in';} ?>">
+
+<?php require_once 'header.php'; ?>
+
 <header id="header">
     <div class="header-wrapper container row">
         <div class="header-left">
@@ -228,9 +227,6 @@ if ( !isset( $_COOKIE['id'] )){
     </div>
 </div>
 
-<script src="assets/js/scripts.js"></script>
-</body>
-</html>
 
 <?php 
 }
