@@ -8,6 +8,7 @@ $result = $bd_connect->query($sql);
 function post_render ( $posts ){ 
     foreach( $posts as $post ){ ?>
         <div class="col-3 post-item">
+            <img src="<?php if ( !empty( $post['post_image'] ) ) : echo $post['post_image']; endif; ?>" style="width:100%">
             <h3 class="post-title">
                 <?php if ( !empty( $post['post_title'] ) ) : echo $post['post_title']; endif; ?>
             </h3>

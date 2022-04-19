@@ -566,3 +566,12 @@ input[type="submit"]{
   border-radius: 8px;
   padding: 30px;
 }
+
+.notice{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#imgPrev{
+  max-width: 250px;
+}

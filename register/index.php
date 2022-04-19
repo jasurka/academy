@@ -50,8 +50,8 @@ $bd_connect->close();
      <div class="form-wrapper">   
         <div class="form-heading">Sign up</div>
         <form class="register-form form" method="POST">
-            <input type="text" class="login modal-input" name="register_name" required>
-            <input type="password" class="password modal-input" name="register_password" required>
+            <input type="text" class="login modal-input" name="register_name" required placeholder="Username">
+            <input type="password" class="password modal-input" name="register_password" required placeholder="Password">
             <input type="submit" name="register_submit">
         </form>
         <p class="to-log-text">Already have an account? <a href="/login/" class="to-log">Login</a></p>
