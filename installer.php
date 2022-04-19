@@ -16,7 +16,8 @@ if( isset($_POST['db_info_submit']) ) {
             post_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             post_title VARCHAR(100),
             post_excerpt LONGTEXT,
-            post_date DATETIME
+            post_date DATETIME,
+            post_image VARCHAR(100)
             );";
         $sql2 = "CREATE TABLE academy_users (
             user_id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
