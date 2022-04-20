@@ -6,7 +6,7 @@ if ( isset( $_POST['post_add'] )){
     $post_title = htmlspecialchars($_POST['post_title']);
     $post_excerpt = htmlspecialchars($_POST['post_excerpt']);
     $post_date = date('Y-m-d H:i:s');
-    $post_img_url = "images/uploads/" . $_FILES['post_image']['name'];
+    $post_img_url = upload_file();
 
     $add_query = $bd_connect->prepare("INSERT INTO posts (post_title, post_excerpt, post_date, post_image) VALUES (?, ?, ?, ?)");
 
